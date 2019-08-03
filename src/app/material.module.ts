@@ -6,7 +6,10 @@ import {
   MatButtonModule,
   MatInputModule,
   MatNativeDateModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatIconModule
 } from "@angular/material";
 
 const modules = [
@@ -15,7 +18,10 @@ const modules = [
   MatButtonModule,
   MatInputModule,
   MatNativeDateModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatIconModule
 ]
 
 @NgModule({
