@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 
 // Services
 import { AuthService } from './auth/signup/auth.service';
+import { TrainingService } from './training/training.service';
 
 // Components
 import { AppComponent } from './app.component';
@@ -45,7 +46,7 @@ import { StopTrainingComponent } from './training/current-training/stop-training
     FlexLayoutModule,
     FormsModule
   ],
-  providers: [AuthService],
+  providers: [AuthService,TrainingService],
   bootstrap: [AppComponent],
   entryComponents:[StopTrainingComponent]
 })
