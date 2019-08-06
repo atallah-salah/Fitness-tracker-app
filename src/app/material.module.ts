@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { 
   MatDatepickerModule,
@@ -15,7 +16,7 @@ import {
   MatCardModule,
   MatSelectModule,
   MatProgressSpinnerModule,
-  MatDialogModule
+  MatDialogModule,
 } from "@angular/material";
 
 const modules = [
@@ -33,7 +34,9 @@ const modules = [
   MatCardModule,
   MatSelectModule,
   MatProgressSpinnerModule,
-  MatDialogModule
+  MatDialogModule,
+  FormsModule,
+  ReactiveFormsModule
 ]
 
 @NgModule({
