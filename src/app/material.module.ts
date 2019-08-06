@@ -17,6 +17,7 @@ import {
   MatSelectModule,
   MatProgressSpinnerModule,
   MatDialogModule,
+  MatTableModule
 } from "@angular/material";
 
 const modules = [
@@ -36,7 +37,8 @@ const modules = [
   MatProgressSpinnerModule,
   MatDialogModule,
   FormsModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  MatTableModule
 ]
 
 @NgModule({
