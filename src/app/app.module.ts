@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { AngularFireModule} from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
 // Services
 import { AuthService } from './auth/signup/auth.service';
 import { TrainingService } from './training/training.service';
@@ -46,7 +48,8 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     FlexLayoutModule,
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [AuthService,TrainingService],
   bootstrap: [AppComponent],
