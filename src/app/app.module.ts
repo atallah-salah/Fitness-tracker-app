@@ -14,6 +14,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 // Services
 import { AuthService } from './auth/signup/auth.service';
 import { TrainingService } from './training/training.service';
+import { UIService } from './shared/ui.service';
 
 // Components
 import { AppComponent } from './app.component';
@@ -54,7 +55,7 @@ import { environment } from '../environments/environment';
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService,TrainingService],
+  providers: [AuthService,TrainingService,UIService],
   bootstrap: [AppComponent],
   entryComponents:[StopTrainingComponent]
 })
