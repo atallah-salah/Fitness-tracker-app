@@ -19,7 +19,8 @@ import {
   MatDialogModule,
   MatTableModule,
   MatSortModule,
-  MatPaginatorModule
+  MatPaginatorModule,
+  MatSnackBarModule
 } from "@angular/material";
 
 const modules = [
@@ -42,7 +43,8 @@ const modules = [
   ReactiveFormsModule,
   MatTableModule,
   MatSortModule,
-  MatPaginatorModule
+  MatPaginatorModule,
+  MatSnackBarModule
 ]
 
 @NgModule({
