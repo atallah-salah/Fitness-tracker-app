@@ -7,9 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularFireModule} from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+
 // Other Modules
+import { TrainingModule } from "./training/training.module";
 import { AuthModule } from './auth/auth.module';
-import { TrainingModule } from './training/training.module';
 
 // Services
 import { AuthService } from './auth/signup/auth.service';
