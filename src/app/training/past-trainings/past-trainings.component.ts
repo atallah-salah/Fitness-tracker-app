@@ -4,6 +4,7 @@ import { Exercise } from '../exercise.model';
 
 import { TrainingService } from '../training.service';
 import { Subscription } from 'rxjs';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-past-trainings',
@@ -21,12 +22,13 @@ export class PastTrainingsComponent implements OnInit, AfterViewInit ,OnDestroy 
 
   ngOnInit() {
     this.exChangedSubscription = this.trainingService.finishedExercisesChanged.subscribe((exercises:Exercise[])=>{
+      this.dataSource = exercises;
     });
     this.trainingService.fetchCompletedOrCancelledExercises();
   }
 
   ngOnDestroy(){
-    this.exChangedSubscription.unsubscribe();
+    this.exChangedSubscription && this.exChangedSubscription.unsubscribe();
   }
 
   ngAfterViewInit(){
@@ -35,6 +37,8 @@ export class PastTrainingsComponent implements OnInit, AfterViewInit ,OnDestroy 
   }
 
   doFilter(filterValue:string){
+    console.log(44);
+    
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }
