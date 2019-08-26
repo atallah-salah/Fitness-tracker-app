@@ -5,8 +5,7 @@ import { AuthService } from '../signup/auth.service';
 import { UIService } from 'src/app/shared/ui.service';
 import {  Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import * as fromApp from '../../app.reducer';
-import { map } from 'rxjs/operators';
+import * as fromRoot from '../../app.reducer';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,10 +14,10 @@ import { map } from 'rxjs/operators';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   isLoading$:Observable<boolean>;
-  constructor(private authService:AuthService,private uiService:UIService,private store:Store<{ui:fromApp.State}>) { }
+  constructor(private authService:AuthService,private uiService:UIService,private store:Store<{ui:fromRoot.State}>) { }
 
   ngOnInit() {
-    this.isLoading$ = this.store.pipe(map(state => state.ui.isLoading)); 
+    this.isLoading$ = this.store.select(fromRoot.getIsLoading); 
     this.loginForm = new FormGroup({
       email : new FormControl('',{
         validators:[Validators.required,Validators.email]
