@@ -7,13 +7,14 @@ import { Router } from '@angular/router';
 import { TrainingService } from 'src/app/training/training.service';
 import { MatSnackBar } from '@angular/material';
 import { UIService } from 'src/app/shared/ui.service';
-
+import { Store } from '@ngrx/store';
+import * as fromApp from '../../app.reducer';
 @Injectable()
 export class AuthService {
   authChange = new Subject<boolean>();
   private isAuthenticated = false;
 
-  constructor(private router: Router,private aFAuth:AngularFireAuth,private traningService:TrainingService,private uiService:UIService){}
+  constructor(private store :Store<{ui:fromApp.State}>,private router: Router,private aFAuth:AngularFireAuth,private traningService:TrainingService,private uiService:UIService){}
 
   initAithListener(){
     this.aFAuth.authState.subscribe(user => {
@@ -31,25 +32,26 @@ export class AuthService {
   }
 
   registerUser(authData: AuthData){
-    this.uiService.loadingStateChanged.next(true);
+    this.store.dispatch({type:'START_LOADING'});
     this.aFAuth.auth.createUserWithEmailAndPassword(authData.email,authData.password)
     .then(() => {
-      this.uiService.loadingStateChanged.next(false);    })
+    this.store.dispatch({type:'STOP_LOADING'});
+      })
     .catch(error =>{
-      this.uiService.loadingStateChanged.next(false);
+      this.store.dispatch({type:'STOP_LOADING'});
       this.uiService.showSnackbar(error.message,null,3000);
     })
     this.authChange.next(true);
   }
 
   login(authData: AuthData){
-    this.uiService.loadingStateChanged.next(true);
+    this.store.dispatch({type:'START_LOADING'});
     this.aFAuth.auth.signInWithEmailAndPassword(authData.email,authData.password)
     .then(() => {
-      this.uiService.loadingStateChanged.next(false);
+      this.store.dispatch({type:'STOP_LOADING'});
     })
     .catch(error =>{
-      this.uiService.loadingStateChanged.next(false);
+      this.store.dispatch({type:'STOP_LOADING'});
       this.uiService.showSnackbar(error.message,null,3000);
     })
     this.authChange.next(true);
@@ -63,7 +65,3 @@ export class AuthService {
     return this.isAuthenticated;
   }
 }
-
-
-
-// isAuthenticated

@@ -28,6 +28,12 @@ import { StopTrainingComponent } from './training/current-training/stop-training
 import { environment } from '../environments/environment';
 
 
+// Stores
+import {StoreModule } from '@ngrx/store';
+
+// Reducers
+import { appReducer } from './app.reducer';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +51,8 @@ import { environment } from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AuthModule,
-    TrainingModule
+    TrainingModule,
+    StoreModule.forRoot({ui:appReducer}),
   ],
   providers: [AuthService,TrainingService,UIService],
   bootstrap: [AppComponent],
