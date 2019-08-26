@@ -12,8 +12,10 @@ import { StopTrainingComponent } from './current-training/stop-training.componen
 
 // Routing Module
 import { TrainingRoutingModule } from './training-routing.module';
+import { StoreModule } from '@ngrx/store';
 
-
+// import * as fromRoot from '../app.reducer';
+import { trainingReducer } from '../reducers/training.reducer';
 @NgModule({
   declarations:[
     TrainingComponent,
@@ -26,7 +28,8 @@ import { TrainingRoutingModule } from './training-routing.module';
   imports:[
     SharedModule,
     AngularFirestoreModule,
-    TrainingRoutingModule
+    TrainingRoutingModule,
+    StoreModule.forFeature('training',trainingReducer)
   ],
   exports:[],
   entryComponents:[StopTrainingComponent]
