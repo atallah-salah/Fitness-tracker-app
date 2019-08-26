@@ -1,10 +1,8 @@
-// import { User } from './user.model';
 import { AuthData } from './auth-data.model';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { TrainingService } from 'src/app/training/training.service';
-// import { MatSnackBar } from '@angular/material';
 import { UIService } from 'src/app/shared/ui.service';
 import { Store } from '@ngrx/store';
 import * as fromRoot from '../../app.reducer';
