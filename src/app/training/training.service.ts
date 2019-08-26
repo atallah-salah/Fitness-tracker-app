@@ -50,7 +50,7 @@ export class TrainingService{
     this.store.select(fromTraining.getActiveTraining).pipe(take(1)).subscribe(ex => { 
       this.addDataToDatabase({
         ...ex,date:new Date(),
-        state:'completed',
+        state:'cancelled',
         duration:ex.duration * (progress / 100),
         calories:ex.calories * (progress / 100)
           
