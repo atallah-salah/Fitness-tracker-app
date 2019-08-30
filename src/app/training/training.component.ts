@@ -1,8 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { TrainingService } from './training.service';
-import { Store } from '@ngrx/store';
-import * as fromTraining from '../reducers/training.reducer';
 import { Observable } from 'rxjs';
+
+// Reducers
+import * as fromTraining from '../reducers/training.reducer';
+
+// Services
+import { TrainingService } from './training.service';
+
+// Stores
+import { Store } from '@ngrx/store';
+
+
 @Component({
   selector: 'app-training',
   templateUrl: './training.component.html',

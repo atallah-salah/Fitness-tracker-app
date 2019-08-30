@@ -1,11 +1,19 @@
 import { Component, OnInit} from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { take } from 'rxjs/operators';
+
+// Reducers
+import * as fromTraining from '../../reducers/training.reducer';
+
+// Components
 import { StopTrainingComponent} from './stop-training.component';
+
+// Services
 import { TrainingService } from '../training.service';
+
+// Stores
 import { Store } from '@ngrx/store';
 
-import * as fromTraining from '../../reducers/training.reducer';
-import { take } from 'rxjs/operators';
 @Component({
   selector: 'app-current-training',
   templateUrl: './current-training.component.html',

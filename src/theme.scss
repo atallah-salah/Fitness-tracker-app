@@ -3,7 +3,7 @@
 @include mat-core();
 
 $dark-primary: mat-palette($mat-teal);
-$dark-accent:  mat-palette($mat-teal, A900, A100, A400);
+$dark-accent:  mat-palette($mat-teal, 400, 50, 50);
 $dark-warn:    mat-palette($mat-deep-orange);
 
 $candy-app-theme: mat-light-theme($dark-primary, $dark-accent, $dark-warn);

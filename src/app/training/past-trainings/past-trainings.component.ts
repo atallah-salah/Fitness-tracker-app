@@ -2,10 +2,14 @@ import { Component, OnInit ,ViewChild, AfterViewInit} from '@angular/core';
 import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
 import { Exercise } from '../exercise.model';
 
-import { TrainingService } from '../training.service';
-import { Store } from '@ngrx/store';
-
+// Reducers
 import * as fromTraining from '../../reducers/training.reducer';
+
+// Services
+import { TrainingService } from '../training.service';
+
+// Stores
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-past-trainings',

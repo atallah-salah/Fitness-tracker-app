@@ -1,8 +1,13 @@
 import { Component, OnInit,EventEmitter,Output } from '@angular/core';
-import { AuthService } from 'src/app/auth/signup/auth.service';
-import { Store } from '@ngrx/store';
 import * as fromRoot from '../../app.reducer';
 import { Observable } from 'rxjs';
+
+// Stores
+import { Store } from '@ngrx/store';
+
+// Services
+import { AuthService } from 'src/app/auth/signup/auth.service';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

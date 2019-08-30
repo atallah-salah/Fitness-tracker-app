@@ -1,14 +1,19 @@
 import { Component, OnInit} from '@angular/core';
-import { TrainingService } from '../training.service';
 import { Exercise } from '../exercise.model';
 import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { UIService } from 'src/app/shared/ui.service';
 
+// Reducers
 import * as fromTraining from '../../reducers/training.reducer';
 import * as fromRoot from '../../app.reducer';
 
+// Services
+import { TrainingService } from '../training.service';
+import { UIService } from 'src/app/shared/ui.service';
+
+// Stores
 import { Store } from '@ngrx/store';
+
 @Component({
   selector: 'app-new-training',
   templateUrl: './new-training.component.html',

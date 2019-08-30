@@ -1,3 +1,17 @@
 .welcome{
   text-align: center;
 }
+
+.welcome mat-icon{
+  color: #009688;
+  transform: scale(5,5);
+  margin: 30px;
+}
+
+.welcome section{
+  margin-top: 30px;
+}
+
+.welcome section mat-card{
+  width: 100%;
+}

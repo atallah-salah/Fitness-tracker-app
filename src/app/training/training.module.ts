@@ -14,8 +14,9 @@ import { StopTrainingComponent } from './current-training/stop-training.componen
 import { TrainingRoutingModule } from './training-routing.module';
 import { StoreModule } from '@ngrx/store';
 
-// import * as fromRoot from '../app.reducer';
+// Reducers
 import { trainingReducer } from '../reducers/training.reducer';
+
 @NgModule({
   declarations:[
     TrainingComponent,

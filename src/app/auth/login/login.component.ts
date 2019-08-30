@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import {  Observable } from 'rxjs';
+import * as fromRoot from '../../app.reducer';
 
+// Services
 import { AuthService } from '../signup/auth.service';
 import { UIService } from 'src/app/shared/ui.service';
-import {  Observable } from 'rxjs';
+
+// Stores
 import { Store } from '@ngrx/store';
-import * as fromRoot from '../../app.reducer';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

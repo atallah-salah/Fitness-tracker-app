@@ -1,8 +1,12 @@
 import { Component, OnInit,EventEmitter,Output } from '@angular/core';
-import { AuthService } from 'src/app/auth/signup/auth.service';
-import { Store } from '@ngrx/store';
 import * as fromRoot from '../../app.reducer';
 import { Observable } from 'rxjs';
+
+// Services
+import { AuthService } from 'src/app/auth/signup/auth.service';
+
+// Stores
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-sidenav-list',

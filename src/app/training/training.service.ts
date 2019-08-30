@@ -3,11 +3,21 @@ import { Exercise } from './exercise.model';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { Subscription } from 'rxjs';
+
+// Actions
+import * as Training from '../actions/training.actions';
+
+// Reducers
+import * as fromTraining from '../reducers/training.reducer';
+
+// Services
 import { UIService } from '../shared/ui.service';
 
+// Stores
 import { Store } from '@ngrx/store';
-import * as fromTraining from '../reducers/training.reducer';
-import * as Training from '../actions/training.actions';
+
+
+
 @Injectable()
 export class TrainingService{
   private fbSubs :Subscription[] = [];
