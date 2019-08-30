@@ -1,5 +1,7 @@
 <section>
-    <form
+  <mat-card class="mat-card-contanier">
+    <div class="card-header">Login</div>
+  <form
       fxLayout="column"
       fxLayoutAlign="center center"
       fxLayoutGap="10px"
@@ -26,6 +28,7 @@
       <button *ngIf="!(isLoading$ | async)" type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid">Submit</button>
       <mat-spinner *ngIf="(isLoading$ | async)"></mat-spinner>
     </form>
+  </mat-card>
   </section>
   
   <!-- <ol>

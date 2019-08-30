@@ -1,4 +1,6 @@
 <section class="signup-form">
+    <mat-card class="mat-card-contanier">
+      <div class="card-header">Signup</div>
   <form fxLayout="column" fxLayoutGap="8px" fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="onSubmit(f)">
     <mat-form-field>
       <input
@@ -48,4 +50,5 @@
     <button *ngIf="!isLoading" type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Submit</button>
     <mat-spinner *ngIf="isLoading"></mat-spinner>
   </form>
+</mat-card>
 </section>

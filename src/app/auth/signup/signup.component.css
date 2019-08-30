@@ -1,3 +1,19 @@
 mat-form-field{
-    width: 300px;
+  width: 300px;
+}
+
+.mat-card-contanier{
+  width: 300px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,40%);
+}
+
+.card-header{
+  background-color: rgba(178, 223, 219, 0.63);
+  border: 3px solid rgba(224, 242, 241, 0.61);
+  text-align: center;
+  padding: 18px;
+  font-size: 14pt;
+  margin-bottom: 3px;
 }
