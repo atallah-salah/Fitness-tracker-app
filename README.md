@@ -13,9 +13,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   - Flex-Layout
 
 
- Deployed on firebase.
+   Deployed on firebase.
 
-[Demo](https://fitness-app-tracker.firebaseapp.com/)
+   [Demo](https://fitness-app-tracker.firebaseapp.com/)
 
 ## Development server
 
